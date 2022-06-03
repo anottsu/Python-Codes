@@ -3,11 +3,12 @@ import os
 os.system('cls')
 
 lista1 = [1, 2, 6, 6, 6, 3, 4, 9, 5, 15, 65]
-lista2 = list('anottsu haomaru')
+lista2 = list('first Rep')
 lista3 = [1, 1, 1, 2, 2, 2, 3, 3, 3]
 lista4 = list(range(10, -1, -1))
-lista5 = [0, 1, 'a', 2.365, 'anottsu']
+lista5 = [0, 1, 'a', 2.365, 'rep']
 '''
+
 #LISTA COM IF E ELSE
 num = 3
 if num in lista1:
@@ -23,17 +24,17 @@ else:
 
 
 # ORDENANDO UMA LISTA COM O SORT()
-
 lista2.sort()
 print(lista2)
 
-#CONTANDO O NUMERO DE OCORRENCIAS EM UMA LISTA COM O COUNT()
 
+#CONTANDO O NUMERO DE OCORRENCIAS EM UMA LISTA COM O COUNT()
 print(lista1.count(6))
 print(lista2.count('o'))
 
+
 # USANDO O .APPEND()
-lista1.append(42)  # ADD UM UNICO ELEMENTO NO FINAL DA FILA
+lista1.append(42)            # ADD UM UNICO ELEMENTO NO FINAL DA FILA
 lista1.append([99, 98, 97])  # ADD UMA SUBLISTA AO FINAL DA FILA
 print(lista1, "\n")
 
@@ -49,26 +50,30 @@ if 103 in lista1:
 else:
     print('Nada encontrado')
 
+
 # USANDO O .EXTEND()
 # ADD CADA ITEM DA SUBLISTA NA LISTA PRINCIPAL MAS AO FINAL DA FILA
 lista1.extend([101, 102, 103])
 print(lista1, "\n")
 
-lista1.extend(lista2)  # JUNTA AS DUAS LISTAS EM UMA, A LISTA2 ENTRA EM LISTA1
+lista1.extend(lista2)          # JUNTA AS DUAS LISTAS EM UMA, A LISTA2 ENTRA EM LISTA1
 print(lista1, "\n")
 # somaListas = lista1 + lista2 # FAZ A MESMA COISA QUE A LINHA ACIMA
 # print(lista1,"\n")
+
 
 # USANDO O .INSERT()
 # ADD O NOVO VALOR NA POSIÇÃO 2 DESLOCANDO OS DEMAIS VALORES A DIREITA
 lista1.insert(2, 'novoValor')
 print(lista1, "\n")
 
+
 # USANDO O .REVERSE()
 # IMPRIME A LISTA DE TRAS PARA FRENTE
 lista2.reverse()
 print(lista2, "\n")
-# print(lista2[::-1]) # FAZ MESMA COISA QUE O REVERSE SO QUE USANDO O SLICE//
+# print(lista2[::-1])       # FAZ MESMA COISA QUE O REVERSE SO QUE USANDO O SLICE//
+
 
 # USANDO O .COPY()
 # COPIA UMA LISTA PARA UMA OUTRA LISTA
@@ -76,19 +81,20 @@ copiaLista = lista1.copy()
 print(copiaLista, "\n")
 
 
-
 # USANDO O .LEN()
 # CONTA A QUANTIDADE DE ITENS DA LISTA
 print(len(lista2))
+
 
 # USANDO O .POP()
 # REMOVE O ULTIMO ELEMENTO DA LISTA E RETORNA NO  TERMINAL O ELEMENTO RETIRADO
 print(lista2)
 lista2.pop()
 print(lista2, "\n")
-# DA PARA REMOVER O ELEMENTO PELO INDICE, CASO NÃO HOUVER O INDICE INFORMADO APARECERÁ O ERRO IndexError
+# DA PARA REMOVER O ELEMENTO PELO INDICE, CASO NÃO HOUVER O INDICE INFORMADO, APARECERÁ O ERRO IndexError
 lista2.pop(10)
 print(lista2, "\n")
+
 
 # USANDO O .CLEAR()
 # USADO PARA LIMPAR UMA LISTA
@@ -96,12 +102,14 @@ print(lista3)
 lista3.clear()
 print(lista3, "\n")
 
+
 # REPETIR ELEMENTOS DE UMA LISTA
 # QUANDO NAO UTILIZAMOS O LIST AQUI ELE INTENDE COMO "INT" SE USAR O LIST SERÁ STRING
 nova = [1007]
 print(nova)
 nova = nova * 5
 print(nova, "\n")
+
 
 #USANDO .SPLIT()
 # CONVERTE UMA STRING PARA UMA LISTA.
@@ -111,17 +119,17 @@ print(frase)
 frase = frase.split(',')
 print(frase, "\n")
 
+
 # USANDO O .JOIN()
 # CONVERTENDO UMA LISTA PARA STRING
 frase2 = ['maldito', 'kakaroto', 'ele', 'é', 'um', 'gênio']
 print(frase2)
-# ABAIXO DIZ O COMANDO: PEGUE A FRASE2 COLOQUE ESPAÇOS ENTRE OS ELEMENTOS E TRANSFORME EM STRING
+# ABAIXO DIZ O COMANDO: PEGUE A FRASE2 COLOQUE espaços ENTRE OS ELEMENTOS E TRANSFORME EM STRING
 frase21 = ' '.join(frase2)
 print(frase21, "\n")
 # ABAIXO DIZ O COMANDO: PEGUE A FRASE2 COLOQUE ponto e virgula ENTRE OS ELEMENTOS E TRANSFORME EM STRING
 frase21 = ';'.join(frase2)
 print(frase21, "\n")
-
 
 
 #------------ ITERANDO EM UMA LISTA ----------------------------
@@ -133,6 +141,7 @@ for elemento in lista1:
     soma = soma + elemento
 print("\n",soma)
 
+
 # USANDO FOR PARA STRINGS
 del soma
 soma = ''
@@ -140,6 +149,7 @@ for elemento in lista2:
     print(elemento)
     soma = soma + elemento
 print("\n",soma)
+
 
 # USANDO WHILE
 carrinho = []
@@ -168,8 +178,8 @@ del cores
 cores = [num1, num2, num3]
 print("\n", cores)
 
-# FAZER ACESSO AOS ELEMENTOS DE FORMA INDEXADA
 
+# FAZER ACESSO AOS ELEMENTOS DE FORMA INDEXADA
 # indice     0         1           2
 cores = ['verde', 'amarelo', 'vermelho']
 
@@ -182,16 +192,19 @@ print("\n\n")
 # devemos pensar em um circulo onde o final de um elemento é o inicio do outro
 # 2,1,0,-1,-2,-3
 
+
 # USANDO O FOR PARA INDICES
 cores = ['verde', 'amarelo', 'vermelho']
 for cor in cores:
     print("\n", cor, "\n")
+
 
 # USANDO O WHILE PARA INDICES
 indice = 0
 while indice < len(cores):
     print(cores[indice])
     indice = indice + 1
+
 
 # GERAR INDICE EM UM FOR PARA UMA GRANDE LISTA
 for indice, cor in enumerate(cores):
@@ -221,7 +234,6 @@ print(lista2.index('kyo',16)) # BUSCA 'KYO' A PARTIR DO INDICE 16
 print(lista2.index('kyo',1,18)) #PROCURA 'KYO' ENTRE OS INDICES 1 E 18
 
 
-
 # SLINCING TANTO PARA LISTA QUANTO PARA RANGES
 # LISTA[INICIO : FIM : PASSO]
 # RANGE (INICIO : FIM : PASSO)
@@ -229,8 +241,9 @@ print(lista2.index('kyo',1,18)) #PROCURA 'KYO' ENTRE OS INDICES 1 E 18
 # SLINCING EM LISTAS, ABAIXO TEMOS A ESTRUTURA USANDO O PARAMETRO 'INICIO'
 print(lista1[1:])  # imprime todos os números seguintes, excluindo o indice 1
 print(lista1[::])  # pega todos os elementos
-# lembrar do circulo de elementos ele começara de tras para frente
+                   # lembrar do circulo de elementos ele começará de tras para frente
 print(lista1[-3:])
+
 
 # USANDO SLICING COM PARAMETRO 'FIM'
 # pega o indice 0, 1 mas não o 2 ou seja (é lista indice 2- 1)
@@ -241,9 +254,8 @@ print(lista1[1:-6])
 
 # USANDO SLICING COM PARAMETRO 'PASSO'
 print("\n\n", lista1[::3])  # passa de 2 em 2, lembrar (3-1)
-print(lista1[2::-1])  # "ELO"[6,2,1] o resultado
-print(lista2[::-1])  # imprime de tras para frente 
-
+print(lista1[2::-1])        # "ELO"[6,2,1] o resultado
+print(lista2[::-1])         # imprime de tras para frente 
 
 
 # INVERTER VALORES EM UMA LISTA
@@ -254,6 +266,7 @@ nomes[0], nomes[1] = nomes[1], nomes[0]
 print(nomes)
 
 print(nomes.reverse())
+
 
 #COMO REALIZAR SOMA, ENCONTRAR O VALOR MAX, MIN E TAMANHO DE UMA LISTA PARA INT OU FLOAT
 
@@ -270,6 +283,7 @@ tupla = tuple(lista6)
 print("\n",tupla)   #TUPLAS SAO IMPRESSAS DENTRO DE PARENTESES
 print(type(tupla))
 
+
 #DESEMPACOTAR UMA LISTA
 #PEGA A LISTA E DISTRIBUI CADA VALOR EM UM VARIAVEL
 #SE HOUVER MAIS VALORES DO QUE VARIAVEIS OU O INVERSO, HAVERÁ ValueError
@@ -283,11 +297,12 @@ print(num4)
 print(num5)
 print(num6)
 
+
 #COPIANDO UMA LISTA PARA OUTRA (SHALLOW COPY E DEEP COPY)
 #DEEP COPY - COPIA UMA LISTA PARA OUTRA PODENDO MODIFICAR UMA E MANTER A OUTRA
 print("\nDEEPY COPY \n",lista6)
 
-nova = lista6.copy() # O PULO DO GATO ESTA AQUI, PQ FAZEMOS UMA NOVA COPIA
+nova = lista6.copy()  #A DICA ESTÁ AQUI, PORQUE FAZEMOS UMA NOVA COPIA
 print(nova)
 
 nova.append(4)
@@ -297,10 +312,11 @@ print(lista6)
 print(nova)
 print("-"*30) # faz um divisor
 
+
 #SHALLOW COPY - COPIA UMA LISTA PARA OUTRA ONDE UMA ALTERAÇÃO INFLUENCIA A OUTRA
 print("\n\nSHALLOW COPY \n ",lista6)
 
-nova = lista6 # O PULO DO GATO ESTA AQUI, PQ RECEBE O VALOR DE LISTA6 E NÃO UMA COPIA COMO A DEEP
+nova = lista6 # A DICA ESTÁ AQUI, PORQUE RECEBE O VALOR DE LISTA6 E NÃO UMA COPIA COMO A DEEP
 print(nova)
 
 nova.append(4)
